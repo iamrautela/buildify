@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
 
@@ -31,36 +32,36 @@ const Hero = () => {
 
                     <a href="https://prebuiltui.com">
 
-                       <img src="/logo.svg" alt="logo" className="h-11 w-auto"/>
+                        <img src="/logo.svg" alt="logo" className="h-11 w-auto" />
                     </a>
 
 
                     <div className="hidden md:flex items-center gap-8 transition duration-500 text-slate-800">
 
-                        <a href="#" className="hover:text-indigo-600 transition">Home</a>
+                        <a href="#" className="hover:text-green-600 transition">Home</a>
 
-                        <a href="#features" className="hover:text-indigo-600 transition">Features</a>
+                        <a href="#features" className="hover:text-green-600 transition">Features</a>
 
-                        <a href="#testimonials" className="hover:text-indigo-600 transition">Testimonials</a>
+                        <a href="#testimonials" className="hover:text-green-600 transition">Testimonials</a>
 
-                        <a href="#cta" className="hover:text-indigo-600 transition">Contact</a>
+                        <a href="#cta" className="hover:text-green-600 transition">Contact</a>
 
                     </div>
 
 
                     <div className="flex gap-2">
 
-                        <a href="" className="hidden md:block px-6 py-2 bg-indigo-500 hover:bg-indigo-700 active:scale-95 transition-all rounded-full text-white">
+                        <Link to='/app?state=register' className="hidden md:block px-6 py-2 bg-green-500 hover:bg-green-700 active:scale-95 transition-all rounded-full text-white">
 
                             Get started
 
-                        </a>
+                        </Link>
 
-                        <a href="" className="hidden md:block px-6 py-2 border active:scale-95 hover:bg-slate-50 transition-all rounded-full text-slate-700 hover:text-slate-900" >
+                        <Link to='/app?state=login' className="hidden md:block px-6 py-2 border active:scale-95 hover:bg-slate-50 transition-all rounded-full text-slate-700 hover:text-slate-900" >
 
                             Login
 
-                        </a>
+                        </Link>
 
                     </div>
 
@@ -84,13 +85,13 @@ const Hero = () => {
 
                     <a href="/" className="text-white">Home</a>
 
-                    <a href="/products" className="text-white">Products</a>
+                    <a href="#features" className="text-white">Features</a>
 
-                    <a href="/stories" className="text-white">Stories</a>
+                    <a href="#testimonials" className="text-white">Testimonials</a>
 
-                    <a href="/pricing" className="text-white">Pricing</a>
+                    <a href="#contact" className="text-white">Contact</a>
 
-                    <button onClick={() => setMenuOpen(false)} className="active:ring-3 active:ring-white aspect-square size-10 p-1 items-center justify-center bg-indigo-600 hover:bg-indigo-700 transition text-white rounded-md flex" >
+                    <button onClick={() => setMenuOpen(false)} className="active:ring-3 active:ring-white aspect-square size-10 p-1 items-center justify-center bg-green-600 hover:bg-green-700 transition text-white rounded-md flex" >
 
                         X
 
@@ -103,7 +104,7 @@ const Hero = () => {
 
                 <div className="relative flex flex-col items-center justify-center text-sm px-4 md:px-16 lg:px-24 xl:px-40 text-black">
 
-                    <div className="absolute top-28 xl:top-10 -z-10 left-1/4 size-72 sm:size-96 xl:size-120 2xl:size-132 bg-indigo-300 blur-[100px] opacity-30"></div>
+                    <div className="absolute top-28 xl:top-10 -z-10 left-1/4 size-72 sm:size-96 xl:size-120 2xl:size-132 bg-green-300 blur-[100px] opacity-30"></div>
 
 
                     {/* Avatars + Stars */}
@@ -164,7 +165,7 @@ const Hero = () => {
 
                     <div className="flex items-center gap-4 ">
 
-                        <a href='/' className="bg-indigo-500 hover:bg-indigo-600 text-white rounded-full px-9 h-12 m-1 ring-offset-2 ring-1 ring-indigo-400 flex items-center transition-colors">
+                        <a href='/' className="bg-green-500 hover:bg-green-600 text-white rounded-full px-9 h-12 m-1 ring-offset-2 ring-1 ring-indigo-400 flex items-center transition-colors">
 
                             Get started
 
@@ -172,7 +173,7 @@ const Hero = () => {
 
                         </a>
 
-                        <button className="flex items-center gap-2 border border-slate-400 hover:bg-indigo-50 transition rounded-full px-7 h-12 text-slate-700">
+                        <button className="flex items-center gap-2 border border-slate-400 hover:bg-green-50 transition rounded-full px-7 h-12 text-slate-700">
 
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-video size-5" aria-hidden="true"><path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5"></path><rect x="2" y="6" width="14" height="12" rx="2"></rect></svg>
 
