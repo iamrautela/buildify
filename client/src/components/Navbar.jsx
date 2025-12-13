@@ -7,6 +7,8 @@ const Navbar = () => {
 
     const logoutUser = () => {
         navigate('/');
+    }
+
   return (
     <div classNmae='shadow bg-white'>
         <nav className='flex items-center justify-between max-w-7xl mx-auto px-4 py-3.5 text-slate-800 transition-all'>
@@ -14,8 +16,8 @@ const Navbar = () => {
         <img src="/logo.svg" alt="logo" classNane="h-11 w-auto" />
         
         </Link>
-        <div>
-            <p> Hi, {user?.name}</p>
+        <div className='flex items-center gap-4 text-sm'>
+            <p className='max-sm:hidden'> Hi, {user?.name}</p>
             <button onClick={logoutUser} className='bg-white hover:bg-slate-50 border-gray-300 px-7 py-1.5 rounded-full active:scale-95 trabsition-all'>
                 Logout
             </button>
