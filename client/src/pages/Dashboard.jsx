@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo } from 'react'
-import { FilePenLineIcon, PlusIcon, Trash, TrashIcon, UploadCloudIcon } from 'lucide-react'
+import { FilePenLineIcon, PencilIcon, PlusIcon, Trash, TrashIcon, UploadCloudIcon } from 'lucide-react'
 import { useState } from 'react'
 import { dummyResumeData } from '../assets/assets'
 
@@ -9,7 +9,7 @@ const Dashboard = () => {
 
   const [allResumes, setAllResumes] = useState([])
 
-  const resumeData = useMemo(() => [dummyResumeData], [])
+  const resumeData = useMemo(() => dummyResumeData, [])
 
   useEffect(() => {
     setAllResumes(resumeData)
@@ -42,10 +42,11 @@ const Dashboard = () => {
               <FilePenLineIcon className="size-7 group-hover:scale-105 transition-all" style={{color: baseColor}} />
               <p className='text-sm group-hover:scale-105 transition-all px-2 text-center' style={{color:baseColor}}>{resume.title}</p>
               <p className='absolute bottom-1 text-[11px] text-slate-400 group-hover:text-slate-500 transition-all duration-300 px-2 text-center' style={{color: baseColor + '90'}}>
-                Updated on {new Date(resume.updatedAt).toLocalDateString()}
+                Updated on {new Date(resume.updatedAt).toLocaleDateString()}
               </p>
               <div className='absolute top-1 right-1 group-hover:flex items-center hidden'>
-                <TrashIcon />
+                <TrashIcon className='size-7 p-1.5 hover:bg-white/50 rounded text-slate-700 transition-colors' />
+                <PencilIcon className='size-7 p-1.5 hover:bg-white/50 rounded text-slate-700 transition-colors' />
                 
               </div>
             </button>
